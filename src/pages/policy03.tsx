@@ -1,24 +1,12 @@
 import Layout from '@components/common/layout';
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 export default function Home() {
-  const { register, handleSubmit, reset } = useForm();
-  const [items, setItems] = useState([]);
-  const onSubmit = (data) => {
-    setItems([...items, data.item]);
-    reset();
-  };
-
-  const deleteItem = (index) => {
-    const updatedItems = [...items];
-    updatedItems.splice(index, 1);
-    setItems(updatedItems);
-  };
-
   const [checked, setChecked] = useState([false, false]);
+  const router = useRouter();
   return (
     <Layout>
       <div className="relative  px-8 py-12 w-full bg-[url('/background.png')] justify-center items-center h-screen">
@@ -48,11 +36,11 @@ export default function Home() {
           }}
           className="font-Ubuntu text-center text-lg mt-8 leading-8 font-light "
         >
-          Thank you for enrolling in our insurance program at MemoriaGuard's
-          Virtual Memory Assurance Insurance. We appreciate your trust and
-          confidence in our services. We value your memories and relationships,
-          and we are committed to providing the highest level of service.
-          Through our virtual space, we strive to create a seamless and
+          Thank you for enrolling in our insurance program at
+          MemoriaGuard&lsquo;s Virtual Memory Assurance Insurance. We appreciate
+          your trust and confidence in our services. We value your memories and
+          relationships, and we are committed to providing the highest level of
+          service. Through our virtual space, we strive to create a seamless and
           everlasting connection, allowing your cherished memories and love to
           endure. We are dedicated to ensuring that your experiences in the
           virtual realm are meaningful and unforgettable. Thank you for choosing

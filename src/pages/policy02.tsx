@@ -1,23 +1,9 @@
 import Layout from '@components/common/layout';
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 export default function Home() {
-  const { register, handleSubmit, reset } = useForm();
-  const [items, setItems] = useState([]);
-  const onSubmit = (data) => {
-    setItems([...items, data.item]);
-    reset();
-  };
-
-  const deleteItem = (index) => {
-    const updatedItems = [...items];
-    updatedItems.splice(index, 1);
-    setItems(updatedItems);
-  };
-
   const router = useRouter();
   const [checked, setChecked] = useState([false, false]);
   return (
@@ -132,10 +118,10 @@ export default function Home() {
               </div>
             )}
             <div className="ml-2">
-              I understand that following the insured individual's death, the
-              upload of a virtual persona to the virtual space will occur, and
-              additional fees will apply for subsequent adjustments to memories,
-              personality, and other aspects.
+              I understand that following the insured individual&lsquo;s death,
+              the upload of a virtual persona to the virtual space will occur,
+              and additional fees will apply for subsequent adjustments to
+              memories, personality, and other aspects.
             </div>
           </div>
 
