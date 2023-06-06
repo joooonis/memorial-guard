@@ -176,7 +176,7 @@ export default function Home() {
                   router.push('/policy02');
                 }
               }}
-              className={`w-full font-Ubuntu bg-black  text-white py-2 px-4 rounded ${
+              className={`transition text-lg w-full font-Ubuntu bg-black  text-white py-2 px-4 rounded ${
                 checked.some((item) => !item) && 'opacity-50 cursor-not-allowed'
               }}`}
             >

@@ -1,9 +1,8 @@
 import Layout from '@components/common/layout';
 import Image from 'next/image';
 import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
-import Button from '@components/common/button';
-import Leaf from '@components/leaf/leaf';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const { register, handleSubmit, reset } = useForm();
@@ -19,6 +18,7 @@ export default function Home() {
     setItems(updatedItems);
   };
 
+  const router = useRouter();
   const [checked, setChecked] = useState([false, false]);
   return (
     <Layout>
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="relative w-full h-[32rem]">
           <Image
-            src="/p3.png"
+            src="/p1.png"
             fill
             className="object-contain scale-120"
             alt="p1"
@@ -147,7 +147,7 @@ export default function Home() {
                   router.push('/policy03');
                 }
               }}
-              className={`w-full font-Ubuntu bg-black  text-white py-2 px-4 rounded ${
+              className={`transition w-full text-lg font-Ubuntu bg-black  text-white py-2 px-4 rounded ${
                 checked.some((item) => !item) && 'opacity-50 cursor-not-allowed'
               }}`}
             >
