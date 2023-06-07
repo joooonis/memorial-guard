@@ -2,7 +2,7 @@ import Layout from '@components/common/layout';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-export default function Home() {
+export default function Policy() {
   const [checked, setChecked] = useState([false, false, false]);
   const router = useRouter();
   return (

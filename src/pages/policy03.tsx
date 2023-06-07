@@ -19,7 +19,7 @@ export default function Policy() {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1] }}
               transition={{ ease: 'easeOut', duration: 1, delay: 1 }}
-              className="relative w-full h-[32rem]"
+              className="relative w-full h-[40rem]"
             >
               <Image
                 src="/p2.png"

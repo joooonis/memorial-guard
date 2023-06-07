@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-export default function Home() {
+export default function Policy() {
   const router = useRouter();
   const [checked, setChecked] = useState([false, false]);
   return (
