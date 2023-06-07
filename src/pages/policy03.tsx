@@ -30,9 +30,9 @@ export default function Policy() {
             </motion.div>
             <p className="font-Ubuntu text-center text-lg leading-8 mx-12 font-light">
               Will you join our insurance program? <br />
-              At MemoriaGuard's Virtual Memory Assurance Insurance, we invite
-              you to be part of a groundbreaking experience that transcends the
-              boundaries of life and death.
+              At MemoriaGuard&apos;s Virtual Memory Assurance Insurance, we
+              invite you to be part of a groundbreaking experience that
+              transcends the boundaries of life and death.
             </p>
             <div className="w-full space-x-4 mt-12 flex justify-center font-Montesrrat font-medium  ">
               <button
